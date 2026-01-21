@@ -1,28 +1,23 @@
 package com.meli.marketplace;
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
 
 @RestController
-public class HelloController {
-
-    @GetMapping("/")
-    public String hello() {
-        return "¡Hola! Bienvenido al Marketplace de MELI.";
-    }
-    @GetMapping("/products")
+public class CategoriesController {
+  
+    @GetMapping("/categories")
     public String getMethodName() {
-        return "GET: Lista de productos";
-    }
-    @PostMapping("/products")
+        return "GET: Lista de categorias para el producto ";
+    }   
+    @PostMapping("/categories")
     public String postMethodName(@RequestBody String entity) {
         
         return entity;
     }
     
-
 }
