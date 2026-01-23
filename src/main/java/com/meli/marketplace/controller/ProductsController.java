@@ -1,4 +1,4 @@
-package com.meli.marketplace;
+package com.meli.marketplace.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-public class HelloController {
+public class ProductsController {
 
     @GetMapping("/")
     public String hello() {
