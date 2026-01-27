@@ -1,11 +1,15 @@
 package com.meli.marketplace.service;
 
+import java.util.List;
+
+import com.meli.marketplace.models.Product;
+
 public interface ProductsService {
 
     String hello();
 
-    String getListProducts();
+    List<Product> getListProducts();
 
-    String postPrducts(String entity);
+    Product postProducts(Product entity);
 
 }
