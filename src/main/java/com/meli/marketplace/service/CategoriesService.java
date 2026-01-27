@@ -1,8 +1,12 @@
 package com.meli.marketplace.service;
 
+import java.util.List;
+
+import com.meli.marketplace.models.Category;
+
 public interface CategoriesService {
 
-    String getCategories();
+    List<Category> getCategories();
 
-    String postCategories(String entity);
+    Category postCategories(Category entity);
 }

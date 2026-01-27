@@ -1,8 +1,11 @@
 package com.meli.marketplace.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.meli.marketplace.models.Product;
 import com.meli.marketplace.service.ProductsService;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,13 +26,13 @@ public class ProductsController {
         return productsService.hello();
     }
     @GetMapping("/products")
-    public String getListProducts() {
+    public List<Product> getListProducts() {
         return productsService.getListProducts();
     }
     @PostMapping("/products")
-    public String postPrducts(@RequestBody String entity) {
+    public Product postProducts(@RequestBody Product product) {
         
-        return entity;
+        return productsService.postProducts(product);
     }
     
 

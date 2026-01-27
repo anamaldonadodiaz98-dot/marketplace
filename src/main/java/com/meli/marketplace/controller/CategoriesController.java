@@ -1,7 +1,10 @@
 package com.meli.marketplace.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.RestController;
 
+import com.meli.marketplace.models.Category;
 import com.meli.marketplace.service.CategoriesService;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,13 +23,13 @@ public class CategoriesController {
     }
     
     @GetMapping("/categories")
-    public String getCategories() {
+    public List<Category> getCategories() {
         return categoriesService.getCategories();
     }   
     @PostMapping("/categories")
-    public String postCategories(@RequestBody String entity) {
+    public Category postCategories(@RequestBody Category category) {
         
-        return entity;
+        return categoriesService.postCategories(category);
     }
     
 }
